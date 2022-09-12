@@ -10,13 +10,15 @@ class IconTextContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Transform(
       //alignment: Alignment.topRight,
-      transform: Matrix4.skewY(0.3)..rotateZ(-math.pi / 12.0),
+      transform: Matrix4.skewY(0.4)..rotateZ(-math.pi / 12),
       child: Container(
         alignment: Alignment.center,
-        height: 70,
-        width: 70,
+        height: MediaQuery.of(context).size.height * 0.09,
+        width: MediaQuery.of(context).size.height * 0.09,
         decoration: BoxDecoration(
-            color: Colors.black87, border: Border.all(color: Colors.grey)),
+            borderRadius: BorderRadius.circular(3),
+            color: Colors.black87,
+            border: Border.all(color: Colors.grey)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
