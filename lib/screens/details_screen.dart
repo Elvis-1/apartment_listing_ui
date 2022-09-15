@@ -9,20 +9,21 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Scaffold(
       // extendBodyBehindAppBar: true,
       backgroundColor: Colors.black,
       // appBar: AppBar(),
       body: Padding(
         padding: EdgeInsets.symmetric(
-            vertical: MediaQuery.of(context).size.height * 0.01,
-            horizontal: MediaQuery.of(context).size.width * 0.01),
+            vertical: height * 0.01, horizontal: width * 0.01),
         child: Column(children: [
           Stack(
             children: [
               // background image
               Container(
-                height: MediaQuery.of(context).size.height / 2,
+                height: height / 2,
                 width: double.infinity,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
@@ -34,7 +35,7 @@ class DetailsScreen extends StatelessWidget {
 
               // linear gradient
               Container(
-                height: MediaQuery.of(context).size.height * .6,
+                height: height * .6,
                 width: double.infinity,
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
@@ -48,28 +49,28 @@ class DetailsScreen extends StatelessWidget {
               Positioned(
                 left: 0,
                 right: 0,
-                top: MediaQuery.of(context).size.height * 0.06,
+                top: height * 0.06,
                 child: Padding(
                   padding: EdgeInsets.all(10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CircleIconButton(
-                        height: MediaQuery.of(context).size.height * 0.05,
+                        height: height * 0.05,
                         icon: Icons.arrow_back_ios_new_rounded,
                       ),
                       Row(
                         children: [
                           CircleIconButton(
                             icon: Icons.favorite_border,
-                            height: MediaQuery.of(context).size.height * 0.05,
+                            height: height * 0.05,
                           ),
                           SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.07,
+                            width: width * 0.07,
                           ),
                           CircleIconButton(
                               icon: Icons.bookmark_border,
-                              height: MediaQuery.of(context).size.height * 0.05)
+                              height: height * 0.05)
                         ],
                       ),
                     ],
@@ -79,7 +80,7 @@ class DetailsScreen extends StatelessWidget {
 
               // lease button
               Positioned(
-                bottom: MediaQuery.of(context).size.height * 0.22,
+                bottom: height * 0.22,
                 left: 0,
                 right: 0,
                 child: Center(
@@ -126,7 +127,7 @@ class DetailsScreen extends StatelessWidget {
 
               // apartment address
               Positioned(
-                  bottom: MediaQuery.of(context).size.height * 0.15,
+                  bottom: height * 0.15,
                   left: 0,
                   right: 0,
                   child: Column(
@@ -152,7 +153,7 @@ class DetailsScreen extends StatelessWidget {
 
               // icon and text containers
               Positioned(
-                bottom: MediaQuery.of(context).size.height * 0.05,
+                bottom: height * 0.05,
                 left: 0,
                 right: 0,
                 child: Row(
@@ -171,7 +172,7 @@ class DetailsScreen extends StatelessWidget {
           // agent image and details
           Container(
             // padding: EdgeInsets.all(10),
-            height: MediaQuery.of(context).size.height * 0.09,
+            height: height * 0.09,
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
